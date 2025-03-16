@@ -28,7 +28,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 ); */
 
 const sequelize = new Sequelize(
-    `postgresql://dogs_rnkr_user:0cUYo1VRvXatD06UF9XhPI597r3EpLgB@dpg-cv1qqqd2ng1s738jvgp0-a.oregon-postgres.render.com/dogs_rnkr`,
+    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs_rnkr`,
     {
         logging: false,
         native: false,
